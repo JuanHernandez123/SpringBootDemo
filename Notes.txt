@@ -1,0 +1,11 @@
+Hot to kill the tomcat server when is execute by Eclipse
+########################################################
+
+From the CMD execute the below line to know what is the ID of the service
+netstat -aon | find "8090"
+Example:
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       8452
+  TCP    [::]:8080              [::]:0                 LISTENING       8452
+
+After, execute the below line to stop the service
+taskkill /pid 8452 /f
